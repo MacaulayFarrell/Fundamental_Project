@@ -4,19 +4,20 @@ This is the Repo for my first SFIA project at the Academy.
 # Shopping list web application
 
 ## Resources
-* Jira board: 
-* Website: 
-* Presentation: 
+* Jira board: [Click here]()
+* Website: [Click here]()
+* Presentation: [Click here](https://docs.google.com/presentation/d/1mb8KoRhpG-OuJ1POmKj7klb5A0CG5vYyM1I8YBRJKqY/edit?usp=sharing)
 ## Contents 
 * [Overview](#overview)
    * [Brief](#brief)
-   * [Requirements](#additional-requirements)
+   * [Requirements](#requirements)
    * [About the application](#about-the-application)
 * [Development notes](#development-notes)
 * [Tools used](#tools-used)
 * [Risk Assessment](#risk-assessment)
 * [Testing](#testing)
-* [Issues/Improvements]
+* [Issues](#issues)
+   * [Future Improvements](#future-improvements)
 ## Overview
 ### Brief
 The brief for this application is the following: To create a CRUD application with the utilisation of supporting tools, methodologies and technologies that encapsulate all core modules covered during training.
@@ -44,7 +45,10 @@ This web application is a shopping list with CRUD functionality implemented in J
 - GCP
 - Jira 
 ## Risk assessment
+The risk assessment for this project can be found [here](https://docs.google.com/spreadsheets/d/1FZ0upgjej-PR6DOzRNrYEeQYHSlggi4H1xdrt9gCWvM/edit?usp=sharing)
 ## Testing 
+## Issues 
+### Future improvements
 ## Authors 
 Macaulay Farrell
 
