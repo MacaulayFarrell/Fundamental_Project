@@ -13,9 +13,13 @@ This is the Repo for my first SFIA project at the Academy.
    * [Requirements](#requirements)
    * [About the application](#about-the-application)
 * [Development notes](#development-notes)
+   * [Kanban board](#kanban-board)
+   * [ERD](#erd)
 * [Tools used](#tools-used)
 * [Risk Assessment](#risk-assessment)
 * [Testing](#testing)
+   *[Unit testing](#unit-testing)
+   *[Integration testing](#integration-testing)
 * [Issues](#issues)
    * [Future Improvements](#future-improvements)
 ## Overview
@@ -41,14 +45,21 @@ This web application is a shopping list with CRUD functionality implemented in J
 - Update shopping list items
 - Delete shopping list items
 ## Development notes
+### Kanban board 
+You can find a screenshot of the Kanban board built on Jira below:
+### ERD 
+You can find a screenshot of the entity relationship diagram for this project below:
 ## Tools used
 - GCP
 - Jira 
 ## Risk assessment
 The risk assessment for this project can be found [here](https://docs.google.com/spreadsheets/d/1FZ0upgjej-PR6DOzRNrYEeQYHSlggi4H1xdrt9gCWvM/edit?usp=sharing)
 ## Testing 
+Two forms of testing were used for this project - unit testing and integration testing
+### Unit testing
+### Integration testing
 ## Issues 
 ### Future improvements
-## Authors 
-Macaulay Farrell
+## Authors/ 
+Author: Macaulay Farrell, the only contributor was Macaulay Farrell for this project.
 
