@@ -18,8 +18,8 @@ This is the Repo for my first SFIA project at the Academy.
 * [Tools used](#tools-used)
 * [Risk Assessment](#risk-assessment)
 * [Testing](#testing)
-   *[Unit testing](#unit-testing)
-   *[Integration testing](#integration-testing)
+   * [Unit testing](#unit-testing)
+   * [Integration testing](#integration-testing)
 * [Issues](#issues)
    * [Future Improvements](#future-improvements)
 ## Overview
@@ -60,6 +60,6 @@ Two forms of testing were used for this project - unit testing and integration t
 ### Integration testing
 ## Issues 
 ### Future improvements
-## Authors/ 
+## Authors/Contributors
 Author: Macaulay Farrell, the only contributor was Macaulay Farrell for this project.
 
