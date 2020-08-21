@@ -12,7 +12,7 @@ This is the Repo for my first SFIA project at the Academy.
    * [Brief](#brief)
    * [Requirements](#requirements)
    * [About the application](#about-the-application)
-* [Documentation](#development-notes)
+* [Documentation](#documentation)
    * [Kanban board](#kanban-board)
    * [ERD](#erd)
    * [CI Pipeline](#ci-pipeline)
