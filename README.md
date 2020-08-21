@@ -12,7 +12,7 @@ This is the Repo for my first SFIA project at the Academy.
    * [Brief](#brief)
    * [Requirements](#requirements)
    * [About the application](#about-the-application)
-* [Development notes](#development-notes)
+* [Documentation](#development-notes)
    * [Kanban board](#kanban-board)
    * [ERD](#erd)
    * [CI Pipeline](#ci-pipeline)
@@ -45,13 +45,15 @@ This web application is a shopping list with CRUD functionality implemented in J
 - Read all shopping list items 
 - Update shopping list items
 - Delete shopping list items
-## Development notes
+## Documentation
 ### Kanban board 
 You can find a screenshot of the Kanban board built on Jira below:
 ### ERD 
 You can find a screenshot of the entity relationship diagram for this project below:
+![ERD](images/ERD-diagram.png)
 ### CI Pipeline
-You can view the Continuous Integration Pipeline for this project [here](https://drive.google.com/file/d/1x5MQW50r4V02SpBfwQ_d8Ix2EIz7qHrx/view?usp=sharing) CircleCI was used. 
+You can view the Continuous Integration Pipeline for this project below:
+![CI-pipeline](images/CI-pipeline.png)
 
 ## Tools used
 - GCP
