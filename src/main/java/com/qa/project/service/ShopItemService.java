@@ -16,6 +16,7 @@ public class ShopItemService {
     public ShopItemService(ShopItemRepository shopItemRepository) {
         this.shopItemRepository = shopItemRepository;
     }
+
     public List<ShopItem> viewShopItems() {
         //grabs all notes from table
         return this.shopItemRepository.findAll();
@@ -38,7 +39,7 @@ public class ShopItemService {
         // update database with new data
         return this.shopItemRepository.save(updateItem);
     }
-    public Boolean deleteNoteById(Long id) {
+    public Boolean delete(Long id) {
         //checks if item exists by given id
         if(!this.shopItemRepository.existsById(id)) {
             throw new ShopItemNotFoundException();
