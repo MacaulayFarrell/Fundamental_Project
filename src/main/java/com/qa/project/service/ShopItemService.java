@@ -31,11 +31,9 @@ public class ShopItemService {
         //grab id using method
         ShopItem updateItem = findShopItemById(id);
         //update the values stored
-        updateItem.setShopName(shopItem.getShopName());
         updateItem.setItemName(shopItem.getItemName());
         updateItem.setItemCategory(shopItem.getItemCategory());
-        updateItem.setQuantity(shopItem.getQuantity());
-
+        updateItem.setItemQuantity(shopItem.getItemQuantity());
         // update database with new data
         return this.shopItemRepository.save(updateItem);
     }
@@ -48,8 +46,6 @@ public class ShopItemService {
         return this.shopItemRepository.existsById(id);
 
     }
-
-
 
 
 }

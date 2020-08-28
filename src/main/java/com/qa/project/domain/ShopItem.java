@@ -3,38 +3,27 @@ package com.qa.project.domain;
 import javax.persistence.*;
 
 @Entity
-@Table(name="ShopItem")
-
-@SecondaryTable(name="Quantity",
-        pkJoinColumns={
-                @PrimaryKeyJoinColumn(name="item_id")})
-
 public class ShopItem {
     //table 1
     @Id
     @GeneratedValue
-    @Column(name = "item_id")
     private long id;
-    @Column(name = "shop_name")
-    private String shopName;
-    @Column(name = "item_name")
+    @Column
     private String itemName;
-    @Column(name = "item_category")
+    @Column
     private String itemCategory;
-
-    //table 2
-
-    @Column(name = "item_quantity", table = "Quantity")
-    private long quantity;
+    @Column
+    private long itemQuantity;
+    @ManyToOne(targetEntity = Shop.class)
+    private Shop shop;
 
     public ShopItem() {
     }
 
-    public ShopItem(String shopName, String itemName, String itemCategory, long quantity) {
-        this.shopName = shopName;
+    public ShopItem(String itemName, String itemCategory, long itemQuantity) {
         this.itemName = itemName;
         this.itemCategory = itemCategory;
-        this.quantity = quantity;
+        this.itemQuantity = itemQuantity;
     }
 
     public long getId() {
@@ -43,14 +32,6 @@ public class ShopItem {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public String getShopName() {
-        return shopName;
-    }
-
-    public void setShopName(String shopName) {
-        this.shopName = shopName;
     }
 
     public String getItemName() {
@@ -68,12 +49,20 @@ public class ShopItem {
     public void setItemCategory(String itemCategory) {
         this.itemCategory = itemCategory;
     }
-
-    public long getQuantity() {
-        return quantity;
+    public long getItemQuantity() {
+        return itemQuantity;
     }
 
-    public void setQuantity(long quantity) {
-        this.quantity = quantity;
+    public void setItemQuantity(long itemQuantity) {
+        this.itemQuantity = itemQuantity;
     }
+    public Shop getShop() {
+        return shop;
+    }
+
+    public void setShop(Shop shop) {
+        this.shop = shop;
+    }
+
+
 }
