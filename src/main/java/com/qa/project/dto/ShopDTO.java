@@ -17,7 +17,6 @@ public class ShopDTO {
         this.shopName = shopName;
     }
 
-
     public long getId() {
         return id;
     }
