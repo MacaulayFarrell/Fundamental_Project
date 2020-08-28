@@ -15,7 +15,7 @@ public class ShopItem {
     @Column
     private long itemQuantity;
     @ManyToOne(targetEntity = Shop.class)
-    private Shop shop;
+    private Shop shops;
 
     public ShopItem() {
     }
@@ -57,11 +57,11 @@ public class ShopItem {
         this.itemQuantity = itemQuantity;
     }
     public Shop getShop() {
-        return shop;
+        return shops;
     }
 
     public void setShop(Shop shop) {
-        this.shop = shop;
+        this.shops = shop;
     }
 
 

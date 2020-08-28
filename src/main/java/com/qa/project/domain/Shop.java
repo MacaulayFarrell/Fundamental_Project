@@ -11,9 +11,9 @@ public class Shop {
     private long id;
     @Column
     private String shopName;
-    @OneToMany(mappedBy = "shop", fetch = FetchType.LAZY)
-    private List<Shop> shops = new ArrayList<>();
 
+    @OneToMany(mappedBy = "shops", fetch = FetchType.LAZY)
+    private List<ShopItem> shops = new ArrayList<>();
 
     public Shop() {
 
@@ -39,15 +39,13 @@ public class Shop {
         this.shopName = shopName;
     }
 
-    public List<Shop> getShop() {
+    public List<ShopItem> getShops() {
         return shops;
     }
 
-    public void setShop(List<Shop> shop) {
-        this.shops = shop;
+    public void setShops(List<ShopItem> shops) {
+        this.shops = shops;
     }
-
-
 
 
 }

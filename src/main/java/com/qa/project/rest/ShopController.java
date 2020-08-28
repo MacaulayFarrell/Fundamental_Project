@@ -37,8 +37,8 @@ public class ShopController {
         return this.shopService.delete(id);
     }
 
-    @GetMapping("/GetShopById/{id}")
-    public Shop getShopItemById(@PathVariable Long id) {
+    @GetMapping("/getShopById/{id}")
+    public Shop getShopById(@PathVariable Long id) {
         return this.shopService.findShopById(id);
 
     }
