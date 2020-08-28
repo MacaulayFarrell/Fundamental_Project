@@ -1,5 +1,7 @@
 package com.qa.project.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +13,8 @@ public class Shop {
     private long id;
     @Column
     private String shopName;
-
-    @OneToMany(mappedBy = "shops", fetch = FetchType.LAZY)
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "shops"})
+    @OneToMany(mappedBy = "shops", fetch = FetchType.EAGER)
     private List<ShopItem> shops = new ArrayList<>();
 
     public Shop() {
