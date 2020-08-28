@@ -41,7 +41,7 @@ public class ShopItemService {
         update.setItemName(shopItem.getItemName());
         update.setItemCategory(shopItem.getItemCategory());
         update.setItemQuantity(shopItem.getItemQuantity());
-        return this.mapToDTO(this.shopItemRepository.save(shopItem));
+        return this.mapToDTO(this.shopItemRepository.save(update));
     }
 
     public Boolean deleteShopItem(Long id){
