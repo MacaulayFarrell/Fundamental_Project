@@ -1,8 +1,11 @@
 package com.qa.project.rest;
 
 import com.qa.project.domain.ShopItem;
+import com.qa.project.dto.ShopItemDTO;
 import com.qa.project.service.ShopItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,31 +19,30 @@ public class ShopItemController {
         this.shopItemService = shopItemService;
     }
 
+    @GetMapping("/")
+    public ResponseEntity<List<ShopItemDTO>> getShopItems(){
+        return ResponseEntity.ok(this.shopItemService.getShopItems());
+    }
+
     @PostMapping("/createItem")
-    public ShopItem createShopItem(@RequestBody ShopItem shopItem) {
-
-        return this.shopItemService.create(shopItem);
+    public ResponseEntity<ShopItemDTO> createShopItem(@RequestBody ShopItem shopItem){
+        return new ResponseEntity<ShopItemDTO>(this.shopItemService.createShopItem(shopItem), HttpStatus.CREATED);
     }
-
-    @GetMapping("/readAll")
-    public List<ShopItem> getItems() {
-        //returns all items
-        return this.shopItemService.viewShopItems();
-    }
-
     @PutMapping("/updateItem/{id}")
-    public ShopItem updateShopItem(@PathVariable Long id, @RequestBody ShopItem shopItem) {
-        return this.shopItemService.update(id, shopItem);
+    public ResponseEntity<ShopItemDTO> updateShopItem(@PathVariable Long id, @RequestBody ShopItem shopItem){
+        return ResponseEntity.ok(this.shopItemService.updateShopItem(id, shopItem));
     }
 
     @DeleteMapping("/deleteItem/{id}")
-    public Boolean deleteItem(@PathVariable Long id) {
-        return this.shopItemService.delete(id);
+    public ResponseEntity<?> deleteShopItem(@PathVariable Long id){
+        return this.shopItemService.deleteShopItem(id)
+                ? ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build()
+                : ResponseEntity.noContent().build();
     }
 
-    @GetMapping("/GetItemById/{id}")
-    public ShopItem getShopItemById(@PathVariable Long id) {
-        return this.shopItemService.findShopItemById(id);
+    @GetMapping("/getItemById/{id}")
+    public ResponseEntity<ShopItemDTO> getShopItemById(@PathVariable Long id){
+        return ResponseEntity.ok(this.shopItemService.findShopItemById(id));
 
     }
 

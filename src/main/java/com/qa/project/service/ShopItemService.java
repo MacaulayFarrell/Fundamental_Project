@@ -1,14 +1,12 @@
 package com.qa.project.service;
 
 import com.qa.project.domain.ShopItem;
-import com.qa.project.dto.ShopDTO;
 import com.qa.project.dto.ShopItemDTO;
 import com.qa.project.exceptions.ShopItemNotFoundException;
 import com.qa.project.repo.ShopItemRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -30,7 +28,7 @@ public class ShopItemService {
         return this.shopItemRepository.findAll().stream().map(this::mapToDTO).collect(Collectors.toList());
     }
 
-    public ShopItemDTO createShopItems(ShopItem shopItem){
+    public ShopItemDTO createShopItem(ShopItem shopItem){
         return this.mapToDTO(this.shopItemRepository.save(shopItem));
     }
 
