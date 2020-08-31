@@ -10,6 +10,9 @@ public class ShopItemDTO {
 
     }
     public ShopItemDTO(String itemName, String itemCategory, long itemQuantity) {
+        this.itemName = itemName;
+        this.itemCategory = itemCategory;
+        this.itemQuantity = itemQuantity;
 
     }
 
