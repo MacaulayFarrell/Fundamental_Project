@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping List: Delete</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/png" href="../images/Graphicloads-100-Flat-Shopping.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    
+    <h1>Shopping List</h1>
+
+    <div class="mobile-menu">
+      <img id="mobile-button" src="../images/menu-icon.png" alt="nav-button">
+    </div>
+    
+    <nav id="menu-main">
+      <a href="create.html">Create Item</a>
+      <a href="read.html">View Item(s)</a>
+      <a href="update.html">Update Item</a>
+      <a class="active" href="#">Delete Item</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <h2>Delete Shopping List Items</h2>
+
+    <form>
+      <label for="deleteItemId">Item ID</label><input type="number" id="deleteItemId">
+      <input type="submit" id="deleteBtn" value="Delete Item">
+    </form>
+
+  </main>
+
+  <script src="../js/scripts.js"></script>
+  <script src="../js/delete-item.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping List: Read</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/png" href="../images/Graphicloads-100-Flat-Shopping.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+
+    <h1>Shopping List</h1>
+
+    <div class="mobile-menu">
+      <img id="mobile-button" src="../images/menu-icon.png" alt="nav-button">
+    </div>
+
+    <nav id="menu-main">
+      <a href="create.html">Create Item</a>
+      <a class="active" href="#">View Item(s)</a>
+      <a href="update.html">Update Item</a>
+      <a href="delete.html">Delete Item</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <h2>Read Shopping List Items</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Item ID</th>
+          <th>Item Name</th>
+          <th>Item Category</th>
+          <th>Item Quantity</th>
+        </tr>
+      </thead>
+
+      <tbody id="tableBody">
+
+
+      </tbody>
+      
+    </table>
+
+  </main>
+
+  <script src="../js/scripts.js"></script>
+  <script src="../js/read-items.js"></script>
+
+
+</body>
+
+</html>

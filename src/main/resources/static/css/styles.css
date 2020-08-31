@@ -1,0 +1,129 @@
+/* GLOBAL STYLES */
+
+body {
+    background-color: lightblue;
+    margin: auto;
+    font-family: 'Roboto';
+}
+
+h1 {
+    background-color: black;
+    color: lightblue;
+    text-align: center;
+    margin: auto;
+    padding: 1%;
+}
+
+h2 {
+    border-bottom: 3px solid black;
+}
+
+nav {
+    background-color: gray;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 0.75em;
+    font-weight: bold;
+}
+
+.mobile-menu {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+}
+
+.displayMenu {
+    display: flex;
+}
+
+img#mobile-button {
+    width: 5em;
+    height: 5em;
+}
+
+  main {
+      text-align: center;
+      margin: 20px;
+}
+
+table {
+
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+  td,th {
+    border: 1px solid black;
+    padding: 8px;
+  }
+
+  td {
+      background-color: lightgray;
+  }
+
+
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #5893e0;
+    color: white;
+  }
+
+  form {
+      margin-left: 25%;
+      margin-right: 25%;
+      padding: 0.7em;
+      background-color: lightgray;
+  }
+
+  input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0.7em;
+      border-radius: 0.2em;
+
+  }
+
+  input[type=submit] {
+      background-color: #45a049;
+      margin-top: 10px;
+  }
+
+  
+
+/* DESKTOP styles */
+
+@media only screen and (min-width: 1000px) {
+    .mobile-menu {
+        display: none;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;  
+        justify-content: space-evenly;
+    }
+
+    nav a {
+        padding: 1.25em 1.25em;
+    }
+
+    nav a:hover {
+        background-color: lightblue;
+    }
+
+    nav a.active {
+        background-color: lightblue;
+        
+    }
+
+    input[type=submit]:hover {
+        background-color: darkgreen;
+    }
+}

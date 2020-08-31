@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping List: Update</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/png" href="../images/Graphicloads-100-Flat-Shopping.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+
+    <h1>Shopping List</h1>
+
+    <div class="mobile-menu">
+      <img id="mobile-button" src="../images/menu-icon.png" alt="nav-button">
+    </div>
+
+    <nav id="menu-main">
+      <a href="create.html">Create Item</a>
+      <a href="read.html">View Item(s)</a>
+      <a class="active" href="#">Update Item</a>
+      <a href="delete.html">Delete Item</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <h2>Update Shopping List Items</h2>
+
+    <form>
+      <label for="updateItemId">Item ID </label><input type="number" id="updateItemId">
+      <label for="updateItemName">Item Name </label><input type="text" id="updateItemName">
+      <label for="updateItemCategory">Item Category </label><input type="text" id="updateItemCategory">
+      <label for="updateItemQuantity">Item Quantity </label><input type="number" id="updateItemQuantity">
+      <input type="submit" id="updateItemBtn" value="Update Item">
+    </form>
+
+  </main>
+
+  <script src="../js/scripts.js"></script>
+  <script src="../js/update-item.js"></script>
+
+
+</body>
+
+</html>
