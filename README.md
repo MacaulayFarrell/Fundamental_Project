@@ -13,6 +13,7 @@ This is the Repo for my first SFIA project at the Academy.
 * [Documentation](#documentation)
    * [Kanban board](#kanban-board)
    * [User stories](#user-stories)
+   * [MoSCoW prioritization](#MoSCoW-prioritization)
    * [ERD](#erd)
    * [CI Pipeline](#ci-pipeline)
 * [Tools used](#tools-used)
@@ -53,6 +54,8 @@ Backlog:
 ![backlog](images/first-picture%20of%20backlog.JPG)
 ### User Stories
 ![user-stories](images/user%20stories.JPG)
+### MoSCoW Prioritization 
+![moscow](images/moscow.png)
 ### ERD 
 You can find a screenshot of the entity relationship diagram for this project below:
 ![ERD](images/ERD.JPG)
