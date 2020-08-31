@@ -4,8 +4,6 @@ This is the Repo for my first SFIA project at the Academy.
 # Shopping list web application
 
 ## Resources
-* Jira board: [Click here]()
-* Website: [Click here]()
 * Presentation: [Click here](https://docs.google.com/presentation/d/1mb8KoRhpG-OuJ1POmKj7klb5A0CG5vYyM1I8YBRJKqY/edit?usp=sharing)
 ## Contents 
 * [Overview](#overview)
