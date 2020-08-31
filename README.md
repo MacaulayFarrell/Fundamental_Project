@@ -14,6 +14,7 @@ This is the Repo for my first SFIA project at the Academy.
    * [About the application](#about-the-application)
 * [Documentation](#documentation)
    * [Kanban board](#kanban-board)
+   * [User stories](#user-stories)
    * [ERD](#erd)
    * [CI Pipeline](#ci-pipeline)
 * [Tools used](#tools-used)
@@ -48,9 +49,15 @@ This web application is a shopping list with CRUD functionality implemented in J
 ## Documentation
 ### Kanban board 
 You can find a screenshot of the Kanban board built on Jira below:
+![shot-1](images/t1.JPG)
+![shot-2](images/t2.JPG)
+Backlog: 
+![backlog](images/first-picture%20of%20backlog.JPG)
+### User Stories
+![user-stories](images/user%20stories.JPG)
 ### ERD 
 You can find a screenshot of the entity relationship diagram for this project below:
-![ERD](images/ERD-diagram.png)
+![ERD](images/ERD.JPG)
 ### CI Pipeline
 You can view the Continuous Integration Pipeline for this project below:
 ![CI-pipeline](images/CI-pipeline.png)
