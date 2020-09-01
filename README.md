@@ -46,6 +46,7 @@ This web application is a shopping list with CRUD functionality implemented in J
 - Update shopping list items
 - Delete shopping list items
 ## Documentation
+Tip: Click on screenshots to view them
 ### Kanban board 
 You can find a screenshot of the Kanban board built on Jira below:
 ![shot-1](images/t1.JPG)
@@ -66,14 +67,20 @@ You can view the Continuous Integration Pipeline for this project below:
 ## Tools used
 - GCP
 - Jira 
+- IntelliJ Idea Ultimate Edition
+- Postman 
 ## Risk assessment
 The risk assessment for this project can be found [here](https://docs.google.com/spreadsheets/d/1FZ0upgjej-PR6DOzRNrYEeQYHSlggi4H1xdrt9gCWvM/edit?usp=sharing)
 ## Testing 
 Two forms of testing were used for this project - unit testing and integration testing
 ### Unit testing
+- DTO classes were unit tested to ensure each constructor, method, etc, worked properly.
 ### Integration testing
 ## Issues 
+- No issues to report for this project. 
 ### Future improvements
+- Add auto-populate feature for the update form, so it auto-populates data based on ID given.
+- Add a dropdown for selecting item categories.
 ## Authors/Contributors
 Author: Macaulay Farrell, the only contributor was Macaulay Farrell for this project.
 
