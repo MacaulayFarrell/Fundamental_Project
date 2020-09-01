@@ -15,12 +15,12 @@ window.addEventListener("load", function() {
                     let table = document.createElement('table');
                     table.innerHTML =
                         '<thead>' +
-                        '<tr>' +
-                        '<th>Item ID</th>' +
-                        '<th>Item Name</th>' +
-                        '<th>Item Category</th>' +
-                        '<th>Item Quantity</th>' +
-                        '</tr>' +
+                          '<tr>' +
+                            '<th>Item ID</th>' +
+                            '<th>Item Name</th>' +
+                            '<th>Item Category</th>' +
+                            '<th>Item Quantity</th>' +
+                         '</tr>' +
                         '</thead>' +
                         '<tbody>';
 
