@@ -12,22 +12,22 @@ window.addEventListener("load", function() {
                     let header = document.createElement('h3');
                     header.textContent = "Shop name: " + el.shopName;
                     main.appendChild(header);
+                    let table = document.createElement('table');
+                    table.innerHTML =
+                        '<thead>' +
+                        '<tr>' +
+                        '<th>Item ID</th>' +
+                        '<th>Item Name</th>' +
+                        '<th>Item Category</th>' +
+                        '<th>Item Quantity</th>' +
+                        '</tr>' +
+                        '</thead>' +
+                        '<tbody>';
 
                     el.shops.forEach(shop => {
-                        let table = document.createElement('table');
-                        table.innerHTML =
-                            '<thead>' +
-                            '<tr>' +
-                            '<th>Item ID</th>' +
-                            '<th>Item Name</th>' +
-                            '<th>Item Category</th>' +
-                            '<th>Item Quantity</th>' +
-                            '</tr>' +
-                            '</thead>' +
-                            '<tbody>' +
-                            '<tr><td>' + shop.id + '</td><td>' + shop.itemName + '</td><td>' + shop.itemCategory + '</td><td>' + shop.itemQuantity + '</td></tr>' +
-                            '</tbody>';
-                        main.appendChild(table);
+
+                          table.innerHTML += '<tr><td>' + shop.id + '</td><td>' + shop.itemName + '</td><td>' + shop.itemCategory + '</td><td>' + shop.itemQuantity + '</td></tr>';
+                          main.appendChild(table);
                     })
 
                 })
