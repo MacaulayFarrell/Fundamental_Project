@@ -1,36 +1,45 @@
-"use strict";
+window.addEventListener("load", function() {
+    const req = new XMLHttpRequest();
+    req.onreadystatechange = () => {
+        // Example handle logic
+        if (req.status === 200 && req.readyState === 4) {
+            if (req.getResponseHeader("Content-Type") === "application/json") {
 
-window.addEventListener("load", function () {
-  const request = new XMLHttpRequest();
-  const url = "../";
+                let stuff = JSON.parse(req.response);
+                stuff.forEach(el => {
 
-  request.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-          const myArr = JSON.parse(this.responseText);
-          myFunction(myArr);
+                    let main = document.getElementById('content');
+                    let header = document.createElement('h3');
+                    header.textContent = "Shop name: " + el.shopName;
+                    main.appendChild(header);
 
-      }
+                    el.shops.forEach(shop => {
+                        let table = document.createElement('table');
+                        table.innerHTML =
+                            '<thead>' +
+                            '<tr>' +
+                            '<th>Item ID</th>' +
+                            '<th>Item Name</th>' +
+                            '<th>Item Category</th>' +
+                            '<th>Item Quantity</th>' +
+                            '</tr>' +
+                            '</thead>' +
+                            '<tbody>' +
+                            '<tr><td>' + shop.id + '</td><td>' + shop.itemName + '</td><td>' + shop.itemCategory + '</td><td>' + shop.itemQuantity + '</td></tr>' +
+                            '</tbody>';
+                        main.appendChild(table);
+                    })
 
-  };
-
-  request.open("GET", url);
-  request.send();
-
-  function myFunction(arr) {
-
-      let content = "";
-      let i;
-      for(i = 0; i < arr.length; i++) {
-          
-          content += '<tr><td>' + arr[i].id + '</td><td>' + arr[i].itemName + '</td><td>' + arr[i].itemCategory + '</td><td>' + arr[i].itemQuantity + '</td></tr>';
-
-          document.getElementById("tableBody").innerHTML = content;
-
-      }
-
-  }
-
-
-
+                })
+            } else {
+                console.log(
+                    "Looks like its not JSON but lets see what it is... " + req.responseText
+                );
+            }
+        } else {
+            console.log("Oh no... handle error");
+        }
+    };
+    req.open("GET", "http://localhost:8080/getShops");
+    req.send();
 })
-
