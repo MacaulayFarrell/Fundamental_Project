@@ -40,6 +40,6 @@ window.addEventListener("load", function() {
             console.log("Oh no... handle error");
         }
     };
-    req.open("GET", "http://localhost:8080/getShops");
+    req.open("GET", "../getShops");
     req.send();
 })
