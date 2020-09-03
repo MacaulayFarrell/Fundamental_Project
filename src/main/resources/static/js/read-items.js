@@ -1,3 +1,4 @@
+"use strict";
 window.addEventListener("load", function() {
     const req = new XMLHttpRequest();
     req.onreadystatechange = () => {

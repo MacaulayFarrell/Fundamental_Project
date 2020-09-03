@@ -22,7 +22,7 @@ window.addEventListener("load", function () {
         let i;
         for(i = 0; i < arr.length; i++) {
 
-            content += '<option value="' + arr[i].id + '">' + "ID: " + arr[i].id + "|| Name: " + arr[i].itemName + "|| Category: " + arr[i].itemCategory + "|| Quantity: " + arr[i].itemQuantity + '</option>';
+            content += '<option value="' + arr[i].id + '">' + "ID: " + arr[i].id + " || Name: " + arr[i].itemName + " || Category: " + arr[i].itemCategory + " || Quantity: " + arr[i].itemQuantity + '</option>';
             document.getElementById("updateItemId").innerHTML = content;
 
         }
