@@ -12,4 +12,3 @@ function toggleMenu() {
   menuNav.classList.toggle("displayMenu");
   
 }
-
