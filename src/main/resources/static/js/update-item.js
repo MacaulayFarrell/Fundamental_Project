@@ -1,5 +1,5 @@
 "use strict";
-
+//populate select dropdown
 window.addEventListener("load", function () {
     const request = new XMLHttpRequest();
     const url = "../";
@@ -18,7 +18,7 @@ window.addEventListener("load", function () {
 
     function myFunction(arr) {
 
-        let content = "";
+        let content = "<option value=null>Please select an option: </option>";
         let i;
         for(i = 0; i < arr.length; i++) {
 
@@ -29,12 +29,9 @@ window.addEventListener("load", function () {
 
     }
 
-
-
 })
-
+//update feature
 const updateBtn = document.getElementById("updateItemBtn");
-
 
 updateBtn.addEventListener("click", function () {
 
@@ -54,7 +51,27 @@ updateBtn.addEventListener("click", function () {
 
     window.location.reload(true);
 
+})
+//auto populate feature
+const selector = document.getElementById("updateItemId");
 
+selector.addEventListener("change", function () {
 
+    const request = new XMLHttpRequest();
+    const url = "../getItemById/" + selector.value;
+
+    request.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            const myArr = JSON.parse(this.responseText);
+            document.getElementById("updateItemName").value = myArr.itemName
+            document.getElementById("updateItemCategory").value= myArr.itemCategory
+            document.getElementById("updateItemQuantity").value = myArr.itemQuantity;
+
+        }
+
+    };
+
+    request.open("GET", url);
+    request.send();
 
 })
