@@ -20,7 +20,6 @@ This is the Repo for my first SFIA project at the Academy.
 * [Risk Assessment](#risk-assessment)
 * [Testing](#testing)
    * [Unit testing](#unit-testing)
-   * [Integration testing](#integration-testing)
 * [Issues](#issues)
    * [Future Improvements](#future-improvements)
 ## Overview
@@ -58,7 +57,9 @@ Backlog:
 ### MoSCoW Prioritization 
 ![moscow](images/moscow.png)
 ### ERD 
-You can find a screenshot of the entity relationship diagram for this project below:
+Initially the ERD was going to look like:
+![ERD1](images/ERD-diagram.png)
+It was changed slightly to allow more flexibility and create more useful table relationships. The final ERD for this project is below: 
 ![ERD](images/ERD.JPG)
 ### CI Pipeline
 You can view the Continuous Integration Pipeline for this project below:
@@ -72,15 +73,12 @@ You can view the Continuous Integration Pipeline for this project below:
 ## Risk assessment
 The risk assessment for this project can be found [here](https://docs.google.com/spreadsheets/d/1FZ0upgjej-PR6DOzRNrYEeQYHSlggi4H1xdrt9gCWvM/edit?usp=sharing)
 ## Testing 
-Two forms of testing were used for this project - unit testing and integration testing
 ### Unit testing
-- DTO classes were unit tested to ensure each constructor, method, etc, worked properly.
-### Integration testing
+- DTO classes were unit tested to ensure each constructor, method, etc, worked properly. 
 ## Issues 
-- No issues to report for this project. 
+- No issues to report for this project. This project has been great experience.
 ### Future improvements
-- Add auto-populate feature for the update form, so it auto-populates data based on ID given.
-- Add a dropdown for selecting item categories.
+- Add login and register functionality for personalized shopping lists
 ## Authors/Contributors
 Author: Macaulay Farrell, the only contributor was Macaulay Farrell for this project.
 
