@@ -17,8 +17,8 @@ window.addEventListener("load", function () {
 
     function myFunction(arr) {
 
-        let content = "";
         let i;
+        let content = "<option value=null>Please select an item: </option>";
         for(i = 0; i < arr.length; i++) {
 
             content += '<option value="' + arr[i].id + '">' + "ID: " + arr[i].id + " || Name: " + arr[i].itemName + " || Category: " + arr[i].itemCategory + " || Quantity: " + arr[i].itemQuantity + '</option>';
@@ -37,14 +37,18 @@ const deleteBtn = document.getElementById("deleteBtn");
 
 deleteBtn.addEventListener("click", function () {
     const id = document.getElementById("deleteItemId").value;
-    const req = new XMLHttpRequest();
-    const url = "../deleteItem/" + id;
-    req.open("DELETE", url);
-    req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    req.send();
+    if(id === "null") {
+        alert("Please choose an item to delete first!");
+    }
+    else {
+        const req = new XMLHttpRequest();
+        const url = "../deleteItem/" + id;
+        req.open("DELETE", url);
+        req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        req.send();
 
-    window.location.reload(true);
+        window.location.reload(true);
 
-
+    }
 
 })

@@ -21,7 +21,7 @@ window.addEventListener("load", function () {
 
     function myFunction(arr) {
 
-        let content = "";
+        let content = "<option value=null>Please select a shop: </option>";
         let i;
         for(i = 0; i < arr.length; i++) {
 
@@ -44,13 +44,14 @@ createBtn.addEventListener("click", function () {
     const itemCategory = document.getElementById("createItemCategory").value;
     const itemQuantity = document.getElementById("createItemQuantity").value;
     const shopSelector = document.getElementById("shops").value;
+    if (itemName === "" || itemQuantity === "" || itemCategory === "null" || shopSelector === "null") {
+        alert("A field is empty, please fill out the form before continuing");
+    } else {
+        const req = new XMLHttpRequest();
+        req.open("POST", "../createItem");
 
+        req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
-    const req = new XMLHttpRequest();
-    req.open("POST", "../createItem");
-
-    req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    if(shopSelector != null) {
         let data = {
             itemName: itemName, itemCategory: itemCategory, itemQuantity: itemQuantity, shop: {
                 id: shopSelector
@@ -58,10 +59,8 @@ createBtn.addEventListener("click", function () {
         };
         req.send(JSON.stringify(data));
     }
-    else {
-        let data = {itemName: itemName, itemCategory: itemCategory, itemQuantity: itemQuantity};
-        req.send(JSON.stringify(data));
-    }
+
+
 
 
 })

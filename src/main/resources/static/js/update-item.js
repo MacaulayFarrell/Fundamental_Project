@@ -18,7 +18,7 @@ window.addEventListener("load", function () {
 
     function myFunction(arr) {
 
-        let content = "<option value=null>Please select an option: </option>";
+        let content = "<option value=null>Please select an item: </option>";
         let i;
         for(i = 0; i < arr.length; i++) {
 
@@ -39,18 +39,21 @@ updateBtn.addEventListener("click", function () {
     const itemName = document.getElementById("updateItemName").value;
     const itemCategory = document.getElementById("updateItemCategory").value;
     const itemQuantity = document.getElementById("updateItemQuantity").value;
+    if(id === "null" || itemName === "" || itemCategory === "null" || itemQuantity === "" ) {
+        alert("A field is empty, please complete the form and try again!")
+    }
+    else {
 
+        const req = new XMLHttpRequest();
+        const url = "../updateItem/" + id;
+        req.open("PUT", url);
 
-    const req = new XMLHttpRequest();
-    const url = "../updateItem/" + id;
-    req.open("PUT", url);
+        req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        let data = {itemName: itemName, itemCategory: itemCategory, itemQuantity: itemQuantity};
+        req.send(JSON.stringify(data));
 
-    req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    let data = { itemName: itemName, itemCategory: itemCategory, itemQuantity: itemQuantity };
-    req.send(JSON.stringify(data));
-
-    window.location.reload(true);
-
+        window.location.reload(true);
+    }
 })
 //auto populate feature
 const selector = document.getElementById("updateItemId");
