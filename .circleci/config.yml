@@ -1,0 +1,28 @@
+version: 2.1
+jobs:
+  test:
+    machine:
+      enabled: true
+    steps:
+      - run: echo "Test area"
+  deploy:
+    machine:
+      enabled: true
+    steps:
+      - run:
+          name: Install Java & maven & git
+          command: ssh $SSH_USER@$SSH_HOST "sudo apt-get install git -y && sudo apt install openjdk-8-jdk -y && sudo apt install maven -y"
+      - run:
+          name: Clone Repo
+          command: ssh $SSH_USER@$SSH_HOST "git clone https://github.com/MacaulayFarrell/Fundamental_Project.git"
+      - run:
+          name: Deploy Application
+          command: ssh $SSH_USER@$SSH_HOST "cd ~/Fundamental_Project && mvn clean install && mvn spring-boot:run"
+workflows:
+  version: 2.1
+  test-and-deploy:
+    jobs:
+      - test
+      - deploy:
+          requires:
+            - test
