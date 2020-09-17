@@ -9,7 +9,7 @@ services:
       protocol: tcp
   mysql-container:
     image: maccpr7/spring-db:latest
-    build ./mysql
+    build: ./mysql
     ports:
     - target: 3306
       published: 3306
