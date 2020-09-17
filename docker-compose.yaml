@@ -7,7 +7,13 @@ services:
     - target: 8080
       published: 8080
       protocol: tcp
-
+  mysql-container:
+    image: maccpr7/spring-db:latest
+    build ./mysql
+    ports:
+    - target: 3306
+      published: 3306
+      protocol: tcp
   nginx:
     image: nginx:latest
     ports:
