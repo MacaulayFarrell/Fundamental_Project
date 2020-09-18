@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   app:
-    image: maccpr7/sfia1:latest
+    image: maccpr7/sfia1:${app_version}
     build: ./
     ports:
     - target: 8080
